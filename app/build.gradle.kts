@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.jetbrains.kotlin.kapt)
 }
 
 android {
@@ -66,4 +67,11 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    // Google Maps SDK for Android
+    implementation(libs.com.google.android.gms.play.services.maps2)
+
+    // Room 数据库，用于存储图片的位置信息
+    implementation(libs.androidx.room.room.runtime3)
+    implementation(libs.androidx.room.room.ktx3) // 如果使用 Kotlin
+    kapt(libs.androidx.room.room.compiler)
 }

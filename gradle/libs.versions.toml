@@ -1,5 +1,8 @@
 [versions]
 agp = "8.6.0"
+comGoogleAndroidGmsPlayServicesMaps = "18.1.0"
+androidxRoomRoomRuntime = "2.5.1"
+androidxRoomRoomKtx = "2.5.1"
 kotlin = "1.9.0"
 coreKtx = "1.10.1"
 junit = "4.13.2"
@@ -10,7 +13,11 @@ activityCompose = "1.8.0"
 composeBom = "2024.04.01"
 
 [libraries]
+androidx-room-room-compiler = { module = "androidx.room:room-compiler", version.ref = "androidxRoomRoomRuntime" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-room-room-ktx3 = { module = "androidx.room:room-ktx", version.ref = "androidxRoomRoomKtx" }
+androidx-room-room-runtime3 = { module = "androidx.room:room-runtime", version.ref = "androidxRoomRoomRuntime" }
+com-google-android-gms-play-services-maps2 = { module = "com.google.android.gms:play-services-maps", version.ref = "comGoogleAndroidGmsPlayServicesMaps" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -28,4 +35,5 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 
